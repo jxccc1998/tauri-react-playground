@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Preview</title>
+</head>
+<body>
+<script>
+    window.addEventListener('error', (e) => {
+        window.parent.postMessage({type: 'ERROR', message: e.message})
+    })
+</script>
+<script type="importmap"></script>
+<script id="appSrc" type="module"></script>
+<div id="root"></div>
+</body>
+</html>
